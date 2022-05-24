@@ -12,11 +12,19 @@ server.get('/ping', (req,resp) => {
     resp.send('pong');
 });
 
-server.get('/corprimária/:cor', (req, resp) => {
-    let corprimária = "vermelho" || "amarelo" || "azul";
-    resp.send({
-        let x = corprimária  
-    })
+server.get('/corprimaria/:cor', (req, resp) => {
+    let cor = req.params.cor;
+    let r1 = false;
+
+    if(cor = "amarelo" || "azul" || "vermelho"){ 
+        r1 = true;
+    }
+
+    resp.send(r1)
+})
+
+server.get('/', (req, resp) => {
+    let 
 })
         
 server.listen(process.env.PORT, 
